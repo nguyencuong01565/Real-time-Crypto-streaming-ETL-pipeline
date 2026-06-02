@@ -1,0 +1,26 @@
+services:
+  producer:
+    build: ./producer
+    container_name: crypto_producer
+    depends_on:
+      - kafka
+    environment:
+      FINNHUB_API_KEY: ${FINNHUB_API_KEY}
+      FINNHUB_SYMBOLS: ${FINNHUB_SYMBOLS}
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      CRYPTO_TOPIC: crypto_trades
+
+  consumer-db:
+    build: ./Consumer_DB
+    container_name: crypto_consumer_db
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      CRYPTO_TOPIC: crypto_trades
+      KAFKA_GROUP_ID: crypto_db_writer
+      POSTGRES_HOST: host.docker.internal
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: Crypto
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Alphaomega1!
