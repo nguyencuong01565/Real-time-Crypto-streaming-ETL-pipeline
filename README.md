@@ -1,10 +1,10 @@
 # Real-time-Crypto-streaming-ETL-pipeline
 
 
-1.Project Overview 
+## 1.Project Overview 
 This project implements a real-time data pipeline for cryptocurrency market data. Live trade events are collected from the Finnhub WebSocket API, streamed through Kafka, and stored in PostgreSQL for further analysis.
 
-2.Architecture
+## 2.Architecture
 
 Finnhub WebSocket
         ↓
@@ -16,7 +16,7 @@ Kafka Consumer
         ↓
 PostgreSQL
 
-3.Technologies
+## 3.Technologies
 - Python
 - Apache Kafka
 - Docker
@@ -24,9 +24,14 @@ PostgreSQL
 - PostgreSQL
 - WebSocket API
 - 
-4.Features
+## 4.Features
 - Real-time cryptocurrency trade ingestion
 - Kafka-based message streaming
 - Automated data persistence
 - Containerized deployment
 - Support for multiple trading pairs
+
+
+  
+<img width="855" height="647" alt="Screenshot 2026-06-19 at 15 14 45" src="https://github.com/user-attachments/assets/caeb904a-f1f8-45b9-b7cc-7e19abbdf547" />
+successful pipeline database imported
