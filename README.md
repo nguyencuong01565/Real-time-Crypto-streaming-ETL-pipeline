@@ -5,16 +5,24 @@
 This project implements a real-time data pipeline for cryptocurrency market data. Live trade events are collected from the Finnhub WebSocket API, streamed through Kafka, and stored in PostgreSQL for further analysis.
 
 ## 2.Architecture
-
-Finnhub WebSocket
-        ↓
-Kafka Producer
-        ↓
-Kafka Topic
-        ↓
-Kafka Consumer
-        ↓
+```md
+Finnhub WebSocket/API
+        |
+        v
+WebSocket Client / Kafka Producer
+        |
+        v
+Kafka Topic: market-trades / prices / candles
+        |
+        v
+Kafka Consumer / Stream Processor
+        |
+        v
 PostgreSQL
+        |
+        v
+DBeaver / App / Dashboard
+```
 
 ## 3.Technologies
 - Python
