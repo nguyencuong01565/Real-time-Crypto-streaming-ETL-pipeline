@@ -26,7 +26,7 @@ PostgreSQL
 DBeaver / App / Dashboard
 ```
 
-## 3.Technologies
+## 3.Tech stack
 - Python
 - Apache Kafka
 - Docker
